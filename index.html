@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="calculadora">
             <input readonly id="display">
             <div id="chaves">
-                <button onclick="colocar('+')">+</button>
+                <button onclick="colocar('+')"class="especial">+</button>
                 <button onclick="colocar('7')">7</button>
                 <button onclick="colocar('8')">8</button>
                 <button onclick="colocar('9')">9</button>
-                <button onclick="colocar('-')">-</button>
+                <button onclick="colocar('-')"class="especial">-</button>
                 <button onclick="colocar('4')">4</button>
                 <button onclick="colocar('5')">5</button>
                 <button onclick="colocar('6')">6</button>
-                <button onclick="colocar('*')">*</button>
+                <button onclick="colocar('*')" class="especial">*</button>
                 <button onclick="colocar('1')">1</button>
                 <button onclick="colocar('2')">2</button>
                 <button onclick="colocar('3')">3</button>
-                <button onclick="colocar('/')">/</button>
+                <button onclick="colocar('/')"class="especial">/</button>
                 <button onclick="colocar('0')">0</button>
                 <button onclick="colocar('.')">.</button>
-                <button onclick="calcular()">=</button>
-                <button onclick="limpar()">C</button>        
+                <button onclick="calcular()" class="especial">=</button>
+                <button onclick="apagar()" class="especial" id="Del">Del</button>  
+                <button onclick="limpar()" class="especial">C</button>
             </div>
     </div>
-
     <script src="index.js"></script>
 </body>
 </html>
