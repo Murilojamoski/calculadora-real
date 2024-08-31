@@ -12,7 +12,9 @@ function limpar(){
 
 function calcular(){
     try{
-        const corretor = display.value.replace(/(^|[^\d.])0+(\d+)/g, '$1$2');
+        const corretor = display.value.replace(/\b0+(\d+)/g, function(match, p1) {
+            return parseInt(p1, 10);
+        });
         display.value = eval(corretor);
     }
     catch(error){
