@@ -12,7 +12,8 @@ function limpar(){
 
 function calcular(){
     try{
-        display.value = eval(display.value);
+        const corretor = display.value.replace(/\b0+(\d+)/g, '$1'); 
+        display.value = eval(corretor);
     }
     catch(error){
         display.value = "ERROR"
